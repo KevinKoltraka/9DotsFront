@@ -1,0 +1,136 @@
+
+
+.our-partners-homepage {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #000000;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  transition: none !important;
+}
+
+.right-hero-section-content img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%  !important;
+  height: 100vh !important;
+  object-fit: cover; /* Ensures the image covers the section without distortion */
+  z-index: 1; /* Image goes behind the text */
+  margin-left: 0px !important;
+  animation: none !important; 
+  transition: none !important;
+  opacity: 1 !important;
+}
+
+.left-hero-section-content {
+  padding: 1.5rem !important;
+  background-color: #000000b0;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  z-index: 2; /* Content goes above the image */
+  animation: none !important; 
+  transition: none !important;
+}
+
+.left-hero-section-content h2 {
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+.left-hero-section-content p {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.email-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.our-partners-homepage h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: aliceblue;
+}
+
+.who-we-are-section {
+  flex-direction: row-reverse;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.home-our-services-section {
+  width: 100%;
+  padding: 5rem;
+  background-color: #000000;
+}
+
+.home-our-services {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.home-our-services h2 {
+  color: #ffffff;
+}
+
+.home-more-services {
+  width: auto;
+  border: none;
+}
+
+.home-our-services-cards {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .home-our-services-cards {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-our-services-section {
+    width: 100%;
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-our-services-cards {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .about-zolaha-img {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .who-we-are-section {
+    flex-direction: row-reverse;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
