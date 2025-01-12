@@ -2,15 +2,16 @@
   width: 100%;
   display: flex;
   padding: 2rem;
-  background-color: #000000;
+  background-color: #000000 !important;
 }
 
 .left-about-zolaha-section {
-  width: 80%;
+  width: 100%;
   padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #000000 !important;
 }
 
 .about-zolaha-img {
@@ -21,13 +22,14 @@
 }
 
 .right-about-zolaha-section {
-  width: 65%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 3rem;
   gap: 2rem;
   margin-right: 150px;
+  background-color: #000000 !important;
 }
 
 .about-company-name h3 {

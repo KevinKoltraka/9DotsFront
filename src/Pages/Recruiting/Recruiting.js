@@ -151,14 +151,7 @@ const Recruiting = () => {
   return (
     <div id="About">
       <div className="background-wrapper">
-        <Hero
-          title="Recruitment"
-          description="At 9Dots Agency, we specialize in delivering tailored recruitment solutions. From Executive Search to Recruitment Support and Sourcing, we provide end-to-end services to find the right candidates. Our thorough Candidate Evaluation ensures a perfect fit for your team, saving you time and driving business success. Let us help you build the team you need to thrive."
-          btnText="Contact Recruiting Team"
-          heroVideo={uiVideo}
-          urlLink="https://api.whatsapp.com/send?phone=918736082960&text=Hiii%20!!%20%F0%9F%99%83"
-          imgClass="hero-img-custom-style"
-        />
+      
 
         {/* Horizontal Navbar */}
         <div className="section-navbar">

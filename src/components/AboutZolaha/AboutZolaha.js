@@ -35,13 +35,8 @@ const AboutZolaha = ({
   const isRightInView = useInView(rightSectionRef, { triggerOnce: false });
 
   const fadeInVariant = {
-    hidden: { opacity: 0, transform: "translateX(-100px) scale(0.95)" },
-    visible: { opacity: 1, transform: "translateX(0) scale(1)" },
-  };
-
-  const fadeInRightVariant = {
-    hidden: { opacity: 0, transform: "translateX(100px) scale(0.95)" },
-    visible: { opacity: 1, transform: "translateX(0) scale(1)" },
+    hidden: { opacity: 0, transform: "translateY(20px)" },
+    visible: { opacity: 1, transform: "translateY(0)" },
   };
 
   const transitionProps = { duration: 0.9, ease: "easeOut" };
@@ -58,66 +53,83 @@ const AboutZolaha = ({
   return (
     <div className={ClassNameabout_zolaha_section}>
       {/* Left Section */}
-      <motion.div
-        ref={leftSectionRef}
-        className="left-about-zolaha-section"
-        initial="hidden"
-        animate={isLeftInView ? "visible" : "hidden"}
-        variants={fadeInVariant}
-        transition={transitionProps}
-        style={{ willChange: "transform, opacity" }}
-      >
-        <a
+      <div ref={leftSectionRef} className="left-about-zolaha-section">
+        <motion.a
           href={redirectUrl || "#"}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Learn more about ${CompanyName}`}
+          initial="hidden"
+          animate={isLeftInView ? "visible" : "hidden"}
+          variants={fadeInVariant}
+          transition={transitionProps}
         >
-          <img
+          <motion.img
             src={AboutImg || "default-image-path.png"}
             className={AboutZolahaImage}
             alt={CompanyScene || "Default description of the image"}
             loading="lazy"
+            initial="hidden"
+            animate={isLeftInView ? "visible" : "hidden"}
+            variants={fadeInVariant}
+            transition={transitionProps}
           />
-        </a>
-      </motion.div>
+        </motion.a>
+      </div>
 
       {/* Right Section */}
-      <motion.div
-        ref={rightSectionRef}
-        className="right-about-zolaha-section"
-        initial="hidden"
-        animate={isRightInView ? "visible" : "hidden"}
-        variants={fadeInRightVariant}
-        transition={transitionProps}
-        style={{ willChange: "transform, opacity" }}
-      >
-        <div className="about-company-name">
+      <div ref={rightSectionRef} className="right-about-zolaha-section">
+        <motion.div
+          className="about-company-name"
+          initial="hidden"
+          animate={isRightInView ? "visible" : "hidden"}
+          variants={fadeInVariant}
+          transition={transitionProps}
+        >
           <h3>{CompanyName || "Company Name"}</h3>
-        </div>
+        </motion.div>
 
-        <div className="about-company-scene">
+        <motion.div
+          className="about-company-scene"
+          initial="hidden"
+          animate={isRightInView ? "visible" : "hidden"}
+          variants={fadeInVariant}
+          transition={transitionProps}
+        >
           <h2>{CompanyScene || "Our Scene"}</h2>
-        </div>
+        </motion.div>
 
-        <div className="about-company-details">
+        <motion.div
+          className="about-company-details"
+          initial="hidden"
+          animate={isRightInView ? "visible" : "hidden"}
+          variants={fadeInVariant}
+          transition={transitionProps}
+        >
           <p>{CompanyDetails}</p>
           <p>{CompanyDetails2}</p>
-        </div>
+        </motion.div>
 
         <div className="company-facilities">
           {checklistItems.map(
             (item, index) =>
               item && (
-                <div className="checklist-company" key={index}>
+                <motion.div
+                  className="checklist-company"
+                  key={index}
+                  initial="hidden"
+                  animate={isRightInView ? "visible" : "hidden"}
+                  variants={fadeInVariant}
+                  transition={{ ...transitionProps, delay: index * 0.1 }}
+                >
                   <p>
                     {FaIcon} {item}
                   </p>
-                </div>
+                </motion.div>
               )
           )}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

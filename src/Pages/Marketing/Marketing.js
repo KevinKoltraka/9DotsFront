@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import Hero from "../../components/HeroSection/Hero";
-import "./about.css";
 import uiVideo from "./../../images/marketingvid.mp4";
 import OT from "../../images/example.jpg";
 import SEO from "./../../images/example.jpg";
@@ -15,6 +14,7 @@ import RP from "./../../images/example.jpg";
 import EC from "./../../images/example.jpg";
 import OMM from "./../../images/example.jpg";
 import axios from "axios";
+import "./marketing.css";
 
 const sectionData = [
   {
@@ -345,14 +345,7 @@ const Marketing = () => {
   return (
     <div id="About">
       <div className="background-wrapper">
-        <Hero
-          title="Marketing"
-          description="Our Marketing Services include strategies to elevate your brand through SEO, PPC, Social Media Marketing, Web Design, Content Marketing, and more. We specialize in driving growth, enhancing visibility, and improving online presence across multiple platforms."
-          btnText="Contact Marketing Team"
-          heroVideo={uiVideo}
-          urlLink="https://api.whatsapp.com/send?phone=918736082960&text=Hiii%20!!%20%F0%9F%99%83"
-          imgClass="hero-img-custom-style"
-        />
+        
 
         {/* Horizontal Navbar */}
         <div className="section-navbar">

@@ -1,10 +1,10 @@
 import React, { Suspense, lazy } from "react";
+import "./home.css";
 import DotsTeamImage from "./../../images/9Dots2.jpg";
 import AboutImage from "./../../images/mission.avif";
 import Ecom from "./../../images/9Dots.jpg";
 import Portfolio from "./../../images/recruitment.jpg";
 import Happy from "./../../images/ourvision.jpg";
-import "./home.css";
 
 // Lazy load components
 const Hero = lazy(() => import("../../components/HeroSection/Hero"));
