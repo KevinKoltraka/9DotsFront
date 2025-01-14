@@ -2,6 +2,7 @@ import React, { useRef, useMemo } from "react";
 import "./card.css";
 import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Card = ({
   instagramUrl,
@@ -71,7 +72,10 @@ const Card = ({
 
           {/* Always render btText2 and link it to WhatsApp */}
           <Link to="https://api.whatsapp.com/send?phone=355688172927" target="_blank">
-            <button className="secondary-button">{btText2}</button>
+            <button className="secondary-button">
+              {btText2} {/* Text first */}
+              <FaWhatsapp style={{ marginLeft: "8px" }} /> {/* WhatsApp icon on the right */}
+            </button>
           </Link>
         </div>
       </div>

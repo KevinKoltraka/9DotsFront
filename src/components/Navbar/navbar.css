@@ -115,7 +115,10 @@
   justify-content: center;
   align-items: center;
   width: 160%;
-  margin-top: 70px;
+  margin-top: 75px;
+  position: fixed; /* Fix the navbar to the viewport */
+  top: 0; /* Adjust the vertical position */
+  z-index: 1000; /* Ensure it stays above other elements */
 }
 
 .middle-navbar ul {

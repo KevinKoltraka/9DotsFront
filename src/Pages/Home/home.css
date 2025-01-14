@@ -15,7 +15,7 @@
 
 .right-hero-section-content img {
   position: absolute;
-  top: 0;
+  top: 10%;
   left: 0;
   width: 100% !important;
   z-index: 1;
@@ -33,7 +33,7 @@
 .left-hero-section-content {
   padding-left: 15rem !important;
   padding-right: 70rem !important;
-  padding-top: 2rem  !important;
+  padding-top: 10rem  !important;
   padding-bottom: 2rem  !important;
   width: 100%;
   height: 100%;
