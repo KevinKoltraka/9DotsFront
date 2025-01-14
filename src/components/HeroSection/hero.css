@@ -4,8 +4,8 @@
 }
 
 .button-header {
-  background-color: #000000;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -17,7 +17,8 @@
 }
 
 .button-header:hover {
-  background-color: #0056b3;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
 }
 
 .hero-section {

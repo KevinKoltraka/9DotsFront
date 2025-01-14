@@ -22,7 +22,7 @@ const Home = () => {
       <Suspense fallback={<div>Loading Hero...</div>}>
         <Hero
           title="9Dots Agency"
-          description="At 9Dots Agency, we craft tailored marketing solutions that blend data, creativity, and expertise to drive sustainable growth and lasting impact. As trusted partners, we help brands achieve their goals and lead in the global market."
+          description="At 9Dots Agency, we create data-driven, creative marketing solutions that drive sustainable growth and global success."
           btnText="Contact Marketing Team"
           btnText2="Contact Recruiting Team"
           heroImg={DotsTeamImage}
