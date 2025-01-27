@@ -1,0 +1,257 @@
+.about-zolaha-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background-color: #000000 !important;
+}
+
+.left-about-zolaha-section {
+  width: 50%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000 !important;
+}
+
+.about-zolaha-img {
+  width: 65%;
+  border-radius: 15px;
+  margin-left: 100px;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+}
+
+.right-about-zolaha-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  gap: 2rem;
+  background-color: #000000 !important;
+}
+
+.left-about-zolaha-section video {
+  display: block;
+  width: 70%;
+  /* Ensure image/video fits within its container */
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 8px;
+  /* Optional styling */
+  margin-left: 5rem;
+}
+
+
+.about-company-name h3 {
+  font-size: 2.5rem;
+  text-align: justify;
+  color: #ffffff;
+}
+
+.about-company-scene {
+  font-size: 2rem;
+}
+
+.about-company-scene h2 {
+  color: #ffffff;
+}
+
+.about-company-details {
+  font-size: 1.8rem;
+}
+
+.about-company-details p {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.company-facilities {
+  display: flex;
+  gap: 5rem;
+}
+
+.company-facilities .checklist-company {
+  font-size: 1.5rem;
+  color: lightslategray;
+}
+
+.company-facilities .checklist-company p {
+  color: #ffffff;
+}
+
+.btn-about-zolaha {
+  width: 18rem;
+}
+
+/* TABLET VIEW */
+@media (max-width: 1100px) { 
+
+  .left-about-zolaha-section video {
+    display: block;
+    width: 65%;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .about-company-scene h2 {
+   font-size: 2.5rem;
+  }
+  
+}
+
+@media (max-width: 900px) {
+  .about-zolaha-section {
+    display: flex;
+    padding: 5rem;
+  }
+
+  .left-about-zolaha-section video {
+    display: block;
+    width: 70%;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .about-company-scene h2 {
+   font-size: 1.8rem;
+  }
+  
+  .about-company-details p {
+    font-size: 1.6rem;
+    padding: 0rem;
+  }
+
+  .left-about-zolaha-section {
+    width: 100%;
+    padding: 0rem;
+  }
+
+  .about-zolaha-img {
+    width: 70%;
+  }
+
+  .right-about-zolaha-section {
+    width: 100%;
+    display: flex;
+    margin-right: 0px;
+  }
+
+  .about-company-details {
+    font-size: 1.5rem;
+    text-align: left;
+    color: lightslategray;
+  }
+
+  .company-facilities {
+    display: flex;
+    gap: 5rem;
+  }
+
+  .company-facilities .checklist-company {
+    font-size: 1.5rem;
+    color: rgb(124, 126, 129);
+  }
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 900px) {
+  .about-zolaha-section {
+    display: flex;
+    padding: 5rem;
+  }
+
+  .left-about-zolaha-section {
+    width: 100%;
+    padding: 0rem;
+  }
+
+  .about-zolaha-img {
+    width: 70%;
+  }
+
+  .right-about-zolaha-section {
+    width: 100%;
+    display: flex;
+  }
+
+  .about-company-details {
+    font-size: 1.4rem;
+    text-align: justify;
+    color: lightslategray;
+  }
+
+  .company-facilities {
+    display: flex;
+    gap: 5rem;
+  }
+
+  .company-facilities .checklist-company {
+    font-size: 1.8rem;
+    color: rgb(124, 126, 129);
+  }
+}
+
+@media (max-width: 500px) {
+  .about-zolaha-section {
+    display: block;
+    padding: 0rem;
+  }
+
+  .left-about-zolaha-section {
+    width: 100%;
+    padding: 0rem;
+  }
+
+  .about-zolaha-img {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .left-about-zolaha-section video {
+    display: block;
+    width: 45%;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+  }
+  .about-company-details p {
+    width: 95%;
+    color: #ffffff;
+    font-size: 1.4rem;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    white-space: 0;
+    padding: 0;
+    margin-left: 7px;
+    margin-right: 2px;
+  }
+
+  .right-about-zolaha-section {
+    width: 100%;
+    display: flex;
+    padding: 0.5rem;
+    margin: 0;
+  }
+
+  .about-company-name h3 {
+    font-size: 2rem;
+    text-align: justify;
+  }
+
+  .about-company-scene {
+    font-size: 1rem;
+  }
+
+  .about-company-details {
+    font-size: 1.3rem;
+    text-align: justify;
+  }
+
+  .company-facilities {
+    display: flex;
+    gap: 5rem;
+  }
+
+  .company-facilities .checklist-company {
+    font-size: 1rem;
+  }
+}

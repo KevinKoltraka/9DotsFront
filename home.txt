@@ -1,0 +1,29 @@
+{/* Lazy Loaded Hero Component */}
+      <Suspense fallback={<div>Loading Hero...</div>}>
+        <Hero
+          title="9Dots Agency"
+          description="At 9Dots Agency, we create data-driven, creative marketing solutions that drive sustainable growth and global success."
+          btnText="Contact Marketing Team"
+          btnText2="Contact Recruiting Team"
+          heroVideo={DotsTeamVideo}
+          alt="9Dots Team Image"
+          email={email}
+          email2={email2}
+        />
+      </Suspense>
+
+
+      const Home = () => {
+  // const email = "marketing@9dotsagency.com";
+  // const email2 = "recruitment@9dotsagency.com";
+
+
+  {/* Lazy Loaded Video Section */}
+      <Suspense fallback={<div>Loading Video...</div>}>
+        <div className="video-container">
+          <video width="100%" height="auto" autoPlay loop muted>
+            <source src={DotsTeamVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </Suspense>
