@@ -1,0 +1,628 @@
+.our-partners-homepage {
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #000000e8;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh !important;
+  overflow: hidden;
+  transition: none !important;
+}
+
+.right-hero-section-content img {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100% !important;
+  z-index: 1;
+  margin-left: 0 !important;
+  animation: none !important;
+  transition: none !important;
+  opacity: 1 !important;
+  /* filter: brightness(70%) drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5)); */
+}
+
+.hero-section .left-hero-section-content {
+  margin-left: 0 !important;
+}
+
+/* .left-hero-section-content {
+  padding-left: 5rem !important;
+  padding-right: 75rem !important;
+  padding-top: 10rem  !important;
+  padding-bottom: 2rem  !important;
+  width: 100%;
+  position: absolute;
+  top: 25%;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #000000;
+  z-index: 2;
+  animation: none !important;
+  transition: none !important;
+  font-weight: bold;
+}
+
+@keyframes colorChange {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  25% {
+    color: #E0FFFF;
+  }
+  50% {
+    color: #808080;
+  }
+  75% {
+    color: #333333;
+  }
+  100% {
+    color: rgb(0, 0, 0);
+  }
+}
+
+.left-hero-section-content h2 {
+  margin-top: 17rem;
+  font-size: 4rem;
+  animation: colorChange 4s infinite; 
+}
+
+.left-hero-section-content p {
+  font-size: 2rem;
+  color: #000000 !important;
+  padding: 0;
+} 
+
+.email-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+} */
+
+.our-partners-homepage h2 {
+  font-family: sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.who-we-are-section {
+  flex-direction: row-reverse;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.home-our-services-section {
+  padding: 2rem 1rem;
+  background: linear-gradient(to bottom, #fafafa 0%, #f0f0f0 100%);
+  overflow: hidden;
+}
+
+.home-our-services-section:hover {
+  background: linear-gradient(to bottom, #f0f0f0 0%, #dcdcdc 100%);
+}
+
+.home-our-services {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.home-our-services h2 {
+  font-family: sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.home-our-services-cards-wrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.marketing-recruiting {
+  display: flex;
+  justify-content: center; /* Centers the items horizontally */
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.home-our-services-cards-top {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px; /* Optional: Add rounded corners */
+}
+
+.home-our-services-cards-bottom {
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+  border-radius: 15px; /* Optional: Add rounded corners */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .marketing-recruiting {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .home-our-services-cards-top,
+  .home-our-services-cards-bottom {
+    flex-direction: column; /* Stack the cards vertically on smaller screens */
+    gap: 1.5rem; /* Adjust space between items */
+  }
+
+  .home-our-services-cards-top {
+    width: 100%; /* Ensure it takes full width */
+  }
+
+  .home-our-services-cards-bottom {
+    width: 100%; /* Ensure it takes full width */
+  }
+}
+
+@media (max-width: 480px) {
+  .marketing-recruiting {
+    flex-direction: column; /* Stack items vertically for very small screens */
+    gap: 1rem; /* Reduce gap between items */
+  }
+
+  .home-our-services-cards-top,
+  .home-our-services-cards-bottom {
+    gap: 1rem; /* Further reduce gap for small screens */
+  }
+}
+
+.home-our-services-cards .card {
+  min-width: 300px;
+  flex: 0 0 auto;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+}
+
+.video-container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height:"auto";
+}
+
+
+.video-container video {
+  display: block; /* Removes unwanted whitespace */
+  width: 100%;
+  height: auto; /* Makes the video responsive */
+}
+
+/* Meet Our Team Section */
+.team-section {
+  padding: 20px 0;
+  background-color: #f9f9f9 ;
+  text-align: center;
+  color: rgb(0, 0, 0); 
+}
+
+.team-section .section-title {
+  font-family: sans-serif;
+  font-size: 4rem;
+  color: #000000;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  
+}
+
+.team-member {
+  background-color: #f2f2f215;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team-member-img {
+  width: 150px;   /* Set a smaller width */
+  height: 150px;  /* Set a smaller height */
+  object-fit: cover;  /* Ensures the image covers the circle area */
+  border-radius: 50%; /* Keeps the circle shape */
+  margin-top: 4rem;
+}
+
+.team-member-name {
+  font-family: sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 20px 0 0 0;
+}
+
+.team-member-role {
+  font-family: sans-serif;
+  font-size: 1.7rem;
+  color: #000000 !important;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.team-member-social a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.team-member-social a:hover {
+  color: #0077b5; /* Change to LinkedIn color */
+}
+
+.team-member-social .social-icon {
+  transition: color 0.3s ease;
+}
+
+/* Container Styling */
+.happy-clients-section {
+  background-color: #ffffff; /* Soft background for a professional look */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+
+.arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-5%); /* Center the button vertically */
+  width: 40px; /* Circle size */
+  height: 40px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 20px; /* Arrow size */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center the arrow vertically */
+  justify-content: center; /* Center the arrow horizontally */
+  padding: 0; /* Remove extra padding */
+}
+
+
+.arrow.left-arrow {
+  left: -60px; /* Position left arrow */
+}
+
+.arrow.right-arrow {
+  right: -60px; /* Position right arrow */
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000000;
+  border: 2px solid black; 
+}
+/* Testimonials Wrapper */
+.client-testimonials {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4rem; /* Adjusted for better responsiveness */
+  flex-wrap: nowrap; /* Prevents stacking */
+  overflow-x: auto; /* Horizontal scrolling */
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* For Internet Explorer */
+  scrollbar-width: none; /* For Firefox */
+  padding: 20px 0;
+  user-select: none;
+}
+
+.client-testimonials::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
+
+/* Individual Testimonial Card */
+.testimonial-card {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 280px; /* Adjusted width for responsiveness */
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px); /* Elevation effect on hover */
+}
+
+/* Testimonial Text */
+.testimonial-text {
+  font-size: 16px;
+  color: #000000 !important;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/* Client Info */
+.client-info {
+  font-size: 16px; /* Slightly smaller for responsiveness */
+  color: #333;
+}
+
+.client-name {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.client-role {
+  color: #777;
+}
+
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.testimonial-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #000000; /* Default color */
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .marketing-recruiting {
+    width: 100%;
+    gap: 0;
+  }
+  .section-title {
+    font-size: 30px; /* Slightly smaller title */
+  }
+
+  .section-description {
+    font-size: 16px; /* Smaller description text */
+    margin-bottom: 30px;
+  }
+
+  .client-testimonials {
+    gap: 2rem; /* Reduce gap between cards */
+  }
+
+  .testimonial-card {
+    width: 240px; /* Adjusted card width for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 26px; /* Further reduce title size */
+  }
+
+  .section-description {
+    font-size: 14px; /* Smaller description text */
+    margin-bottom: 20px;
+  }
+
+  .client-testimonials {
+    gap: 1rem; /* Smaller gaps for mobile */
+  }
+
+  .testimonial-card {
+    width: 200px; /* Narrower cards for smaller screens */
+  }
+}
+
+
+
+/* Responsive Styles */
+
+@media (max-width: 1200px) {
+  .left-hero-section-content {
+    padding-left: 3rem !important;
+    padding-right: 50rem !important;
+    padding-top: 5rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .left-hero-section-content h2 {
+    font-size: 3rem;
+    margin-top: 10rem;
+  }
+
+  .hero-section {
+    height: 75vh !important;
+  }
+
+  .email-buttons {
+    flex-direction: column;
+  }
+
+  .home-our-services {
+    font-size: 3rem;
+    gap: 1.5rem;
+  }
+
+  .home-our-services h2 {
+    font-size: 3rem;
+  }
+
+  .our-partners-homepage h2 {
+    font-size: 3rem;
+  }
+
+  .video-container {
+    width: 100%;
+    height:"auto";
+  }
+}
+
+@media (max-width: 768px) {
+  .left-hero-section-content {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+    padding-top: 5rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .hero-section {
+    height: 75vh !important;
+  }
+
+  .email-buttons {
+    flex-direction: column;
+  }
+
+  .home-our-services {
+    font-size: 3rem;
+    gap: 1.5rem;
+  }
+
+  .home-our-services h2 {
+    font-size: 3rem;
+  }
+
+  .video-container {
+    margin-top: 6rem;
+    width: 100%;
+    height:"auto";
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-section {
+    padding-top: 1rem;
+  }
+  .testimonial-card {
+    width: auto; /* Narrower cards for smaller screens */
+  }
+   .arrow {
+  display: none;
+   }
+  .arrow.left-arrow {
+    left: -32px;
+  }
+
+  .arrow.right-arrow {
+    right: -30px;
+  }
+  .happy-clients-section {
+    padding: 1rem;
+  }
+  .our-partners-homepage {
+    padding: 0;
+  }
+  .left-hero-section-content {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-top: 3rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .left-hero-section-content h2 {
+    font-size: 2.5rem;
+    margin-top: 7rem;
+  }
+
+  .hero-section {
+    height: 60vh !important;
+  }
+
+  .home-our-services {
+    font-size: 2.5rem;
+    gap: 1rem;
+  }
+
+  .home-our-services h2 {
+    font-family: sans-serif;
+    font-size: 3rem;
+  }
+
+  .home-our-services-cards {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .our-partners-homepage h2 {
+    font-size: 2.5rem;
+  }
+
+  .video-container {
+    width: 100%;
+    height:"auto";
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 400px) {
+  .video-container {
+    width: 100%;
+    height:"auto";
+  }
+}
+
+@media (max-width: 325px) {
+  .video-container {
+    width: 100%;
+    height:"auto";
+    object-fit: cover;
+  }
+
+  .our-partners-homepage h2 {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,162 @@
+.cards-box {
+  background-color: rgb(255, 255, 255);
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center; /* Center the background image */
+  width: 65rem;
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  border: #000000 solid 0.5px;
+  position: relative; /* Ensure text and image are properly stacked */
+  color: #ffffff; /* Set the text color to white or adjust as needed */
+}
+
+.cards-box .card-content {
+  position: relative; /* Ensure content stays above the background */
+  z-index: 1; /* Ensure content stays above the image */
+}
+
+.cards-inside {
+  color: #f5f0f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-box a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+  transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+
+.cards-inside img {
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.card-title {
+  color: #000000;
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+  font-family: sans-serif;
+}
+
+.card-para {
+  width: 50%;
+  font-family: sans-serif;
+  color: #000000 !important;
+  font-size: 1.6rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding: 0.2rem;
+  margin-bottom: 2rem;
+  margin-left: 1.5rem;
+}
+
+.card-label {
+  font-family: "Kaisei Opti", serif;
+  color: rgb(122, 121, 121);
+  font-weight: 900;
+}
+
+.button-box {
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: none !important;
+  margin-left: 1.5rem;
+}
+
+.primary-button {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: auto;
+  color: rgb(245, 248, 248);
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: none !important;
+}
+
+.primary-button:hover {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  box-shadow: none !important;
+}
+
+.third-button {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: auto;
+  color: rgb(245, 248, 248);
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: none !important;
+}
+
+.third-button:hover {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  box-shadow: none !important;
+}
+
+/* Responsive navbar For Tablet */
+@media (max-width: 1025px) {
+  .cards-box {
+    width: 40rem;
+  }
+}
+@media (max-width: 900px) {
+  .card-title {
+    font-family: sans-serif;
+  }
+  .card-image-box a {
+    width: 200px;
+  }
+  .cards-box {
+    width: 100%;
+    margin: 0;
+  }
+
+.cards-inside img {
+  width: 150%;
+  margin-left: 8rem;
+}
+  .button-box {
+    display: flex;
+  }
+
+  .primary-button {
+    padding: 11px;
+    font-size: 1.2rem;
+  }
+
+  .third-button {
+    padding: 11px;
+    font-size: 1.2rem;
+  }
+
+  .secondary-button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .cards-box {
+    width: 100%;
+    margin-left: 0;
+  }
+  .cards-inside img {
+    width: 120%;
+    margin-left: 1rem;
+  }
+}

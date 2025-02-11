@@ -1,0 +1,301 @@
+.about-zolaha-section {
+  width: 100%;
+  padding-left: 9rem;
+  padding-right: 9rem;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  display: flex;
+  align-items: center; /* Vertically align items within the section */
+  justify-content: center; /* Horizontally center the content */
+  margin: 0 auto; /* Horizontally center the entire section within its container */
+}
+
+.about-zolaha-container:nth-child(odd) .about-zolaha-section {
+  flex-direction: row !important; /* Image on the left, text on the right */
+}
+
+.about-zolaha-container:nth-child(odd) .about-zolaha-section .right-about-zolaha-section {
+  border-radius: 10px;
+  width: 200%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  
+  margin-top: 2rem;
+  margin-left: 25rem;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+.about-zolaha-container:nth-child(odd) .about-zolaha-section .left-about-zolaha-section video {
+  width: 140%;
+}
+
+.about-zolaha-container:nth-child(even) .about-zolaha-section {
+  flex-direction: row-reverse !important; /* Text on the left, image on the right */
+}
+
+.about-zolaha-container:nth-child(even) .about-zolaha-section .right-about-zolaha-section {
+  border-radius: 10px;
+  width: 160%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 10rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.about-zolaha-container:nth-child(even) .about-zolaha-section .left-about-zolaha-section video {
+  width: 100%;
+}
+.about-zolaha-container {
+  background: linear-gradient(to right, #ffffff 0%, #f5f5f5 100%) !important;
+}
+
+.about-zolaha-container:hover {
+  background: linear-gradient(to right, #f5f5f5 0%, #e0e0e0 100%) !important;
+}
+
+.left-about-zolaha-section {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-zolaha-section img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+}
+
+.left-about-zolaha-section video {
+  display: block;
+  width: 140%;
+ 
+  height: auto;
+
+  border-radius: 8px;
+
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+} 
+
+
+
+.about-company-name h3 {
+  margin-top: 2rem;
+  font-family: sans-serif;
+  font-size: 4rem;
+  text-align: justify;
+  color: #000000;
+}
+
+.about-company-scene {
+  font-size: 2rem;
+}
+
+.about-company-scene h2 {
+  color: #000000;
+  font-family: sans-serif;
+}
+
+.about-company-details {
+  font-size: 1.8rem;
+}
+
+.about-company-details p {
+  color: #000000 !important;
+  font-size: 2rem;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.company-facilities {
+  display: flex;
+  gap: 5rem;
+}
+
+.company-facilities .checklist-company {
+  font-size: 1.5rem;
+  color: lightslategray;
+}
+
+.company-facilities .checklist-company p {
+  color: #ffffff;
+}
+
+.btn-about-zolaha {
+  width: 18rem;
+}
+
+/* TABLET VIEW */
+@media (max-width: 1100px) { 
+
+  .left-about-zolaha-section video {
+    display: block;
+    width: 65%;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .about-company-scene h2 {
+   font-size: 2.5rem;
+  }
+  
+}
+
+@media (max-width: 900px) {
+  .about-zolaha-section {
+    display: flex;
+    padding: 5rem;
+  }
+
+  .left-about-zolaha-section video {
+    display: block;
+    width: 70%;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .about-company-scene h2 {
+   font-size: 1.8rem;
+  }
+  
+  .about-company-details p {
+    font-size: 1.6rem;
+    padding: 0rem;
+  }
+
+  .left-about-zolaha-section {
+    width: 100%;
+    padding: 0rem;
+  }
+
+  .about-zolaha-img {
+    width: 70%;
+  }
+
+  .right-about-zolaha-section {
+    display: flex;
+    margin-right: 0px;
+  }
+
+  .about-company-details {
+    font-size: 1.5rem;
+    text-align: left;
+    color: lightslategray;
+  }
+
+  .company-facilities {
+    display: flex;
+    gap: 5rem;
+  }
+
+  .company-facilities .checklist-company {
+    font-size: 1.5rem;
+    color: rgb(124, 126, 129);
+  }
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 900px) {
+  .about-zolaha-section {
+    display: flex;
+    padding: 5rem;
+  }
+
+  .left-about-zolaha-section {
+    width: 100%;
+    padding: 0rem;
+  }
+
+  .about-zolaha-img {
+    width: 70%;
+  }
+
+  .right-about-zolaha-section {
+    display: flex;
+  }
+
+  .about-company-details {
+    font-size: 1.4rem;
+    text-align: justify;
+    color: lightslategray;
+  }
+
+  .company-facilities {
+    display: flex;
+    gap: 5rem;
+  }
+
+  .company-facilities .checklist-company {
+    font-size: 1.8rem;
+    color: rgb(124, 126, 129);
+  }
+}
+
+@media (max-width: 500px) {
+  .about-zolaha-section {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem;
+  }
+
+  .left-about-zolaha-section {
+    width: 100%;
+    padding: 0rem;
+  }
+
+  .about-zolaha-img {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .left-about-zolaha-section video {
+    display: none;
+  }
+  .about-company-details p {
+    width: 95%;
+    color: #ffffff;
+    font-size: 1.4rem;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    white-space: 0;
+    padding: 0;
+    margin-left: 7px;
+    margin-right: 2px;
+  }
+
+  .right-about-zolaha-section {
+    order: 1; /* Place it first */
+    display: flex;
+    padding: 1rem;
+    margin-top: 4rem;
+  }
+
+  .about-company-name h3 {
+    font-size: 2rem;
+    text-align: justify;
+  }
+
+  .about-company-scene {
+    font-size: 1rem;
+  }
+
+  .about-company-details {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .company-facilities {
+    display: flex;
+    gap: 5rem;
+  }
+
+  .company-facilities .checklist-company {
+    font-size: 1rem;
+  }
+}

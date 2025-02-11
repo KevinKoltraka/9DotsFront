@@ -1,0 +1,303 @@
+.toggle-btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Styling the button */
+.toggle-btn {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-family: sans-serif;
+}
+
+.toggle-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: #000000 1px solid;
+}
+
+/* Container */
+.marketing-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  color: #333;
+  font-family: sans-serif;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 50px 0;
+  background: linear-gradient(45deg, #f0f0f0, #33333315);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  font-family: sans-serif;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+}
+
+.header p {
+  font-size: 1.7rem;
+  font-family: sans-serif;
+}
+
+/* Services */
+.services {
+  padding: 60px 0;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-family: sans-serif;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.service-card {
+  background-color: #ffffff;
+  padding: 30px;
+  width: 100%; /* Make the card take full width of its column */
+  height: 250px; /* Or adjust to match your design preference */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background-size: cover; /* Cover the entire card with the image */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image tiling */
+  font-family: sans-serif;
+}
+
+/* .service-card {
+  background-color: #ffffff;
+  padding: 30px;
+  width: 100%; 
+  height: 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background-size: contain; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+*/
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.impact-stories {
+  background-color: #f4f7fa;
+  padding: 50px 0;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.impact-stories h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+.impact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.impact-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px 10px 0px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-family: sans-serif;
+}
+
+.impact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.impact-card h3 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.impact-card p {
+  font-size: 1.5rem;
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+.contactus {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+}
+
+.getintouch {
+  background-color: #000000;
+  color: #ffffff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.getintouch:hover {
+  background-color: #000000;
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+/* For screens 1200px and below (Large screens like desktop) */
+@media (max-width: 1200px) {
+  .service-cards {
+    grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+  }
+
+  .impact-cards {
+    grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+  }
+
+  .toggle-btn {
+    font-size: 1.1rem; /* Slightly smaller button text */
+  }
+
+  .header h1 {
+    font-size: 2.5rem; /* Slightly smaller header text */
+  }
+
+  .header p {
+    font-size: 1.5rem; /* Adjust paragraph size */
+  }
+}
+
+/* For screens between 992px and 1200px (Tablet/large screen portrait) */
+@media (max-width: 992px) {
+  .service-cards {
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  }
+
+  .impact-cards {
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  }
+
+  .toggle-btn {
+    font-size: 1.1rem;
+    padding: 10px 15px; /* Adjust button size */
+  }
+
+  .header h1 {
+    font-size: 2.3rem;
+  }
+
+  .header p {
+    font-size: 1.4rem;
+  }
+}
+
+/* For screens between 768px and 992px (Tablet) */
+@media (max-width: 768px) {
+  .service-cards {
+    grid-template-columns: 1fr 1fr; /* Two cards per row */
+  }
+
+  .impact-cards {
+    grid-template-columns: 1fr 1fr; /* Two cards per row */
+  }
+
+  .toggle-btn {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1.3rem;
+  }
+}
+
+/* For screens between 480px and 768px (Mobile landscape) */
+@media (max-width: 480px) {
+  .service-cards {
+    grid-template-columns: 1fr; /* One card per row */
+  }
+
+  .impact-cards {
+    grid-template-columns: 1fr; /* One card per row */
+  }
+
+  .toggle-btn {
+    font-size: 1rem;
+    padding: 8px 12px; /* Smaller padding */
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .header p {
+    font-size: 1.2rem;
+  }
+}
+
+/* For screens below 480px (Small screens/mobile) */
+@media (max-width: 480px) {
+  .service-cards {
+    grid-template-columns: 1fr; /* One card per row */
+  }
+
+  .impact-cards {
+    grid-template-columns: 1fr; /* One card per row */
+  }
+
+  .toggle-btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  .header p {
+    font-size: 1.1rem;
+  }
+}
