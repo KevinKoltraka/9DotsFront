@@ -163,7 +163,6 @@
 
 .testimonial-cards {
   display: flex;
-  justify-content: space-between;
   gap: 30px;
 }
 
@@ -189,7 +188,7 @@
 
 /* Call to Action */
 .cta {
-  background-color: #ff6f61;
+  background-color: #000000;
   color: #fff;
   padding: 60px 20px;
   text-align: center;
@@ -202,13 +201,14 @@
 }
 
 .cta-description {
+  color: #fff !important;
   font-size: 1.4rem;
   margin-bottom: 40px;
 }
 
 .cta-button {
-  background-color: #fff;
-  color: #ff6f61;
+  background-color: #fff !important;
+  color: #000000 !important;
   padding: 20px 50px;
   font-size: 1.6rem;
   border: 2px solid #ff6f61;
