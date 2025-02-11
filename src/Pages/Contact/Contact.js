@@ -61,7 +61,7 @@ const Contact = () => {
         {/* Contact Form & Contact Information - Side by Side */}
         <div className="contact-container">
           {/* Left Side - Form */}
-          <div className="contact-form-section">
+          <div className="contact-form-section2">
             <h3 className="form-title">Contact Us</h3>
             <form className="custom-form" onSubmit={handleSubmit}>
               <div className="form-item">
