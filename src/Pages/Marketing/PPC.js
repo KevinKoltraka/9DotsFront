@@ -14,7 +14,7 @@ const PPC = () => {
           <source src="/ppc.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="hero-content">
+        <div className="hero-content2">
           <h1 className="hero-title">Maximize Your Growth with Data-Driven PPC Campaigns</h1>
           <p className="hero-desc">
             Unlock the potential of your business with laser-focused, data-backed PPC strategies. Our team at 9Dots tailors
