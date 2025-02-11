@@ -21,6 +21,9 @@ import PPC from './Pages/Marketing/PPC';
 import SocialMediaMarketing from './Pages/Marketing/SocialMediaMarketing';
 import SocialMediaAdvertising from './Pages/Marketing/SocialMediaAdvertising';
 import LinkBuilding from './Pages/Marketing/LinkBuilding';
+import WebDesign from './Pages/Marketing/WebDesign';
+import MediaProduction from './Pages/Marketing/MediaProduction';
+import ContentMarketing from './Pages/Marketing/ContentMarketing';
         
 
 
@@ -42,6 +45,9 @@ function App() {
           <Route path="/Marketing/social-media-marketing" element={<SocialMediaMarketing />} />
           <Route path="/Marketing/social-media-advertising" element={<SocialMediaAdvertising />} />
           <Route path="/Marketing/link-building" element={<LinkBuilding />} />
+          <Route path="/Marketing/web-design" element={<WebDesign />} />
+          <Route path="/Marketing/media-production" element={<MediaProduction />} />
+          <Route path="/Marketing/content-marketing" element={<ContentMarketing />} />
           <Route path="/recruiting" element={<Recruiting />} />
           <Route path="/job-post" element={<JobPost />} />
           <Route path="/job-list" element={<JobList />} />

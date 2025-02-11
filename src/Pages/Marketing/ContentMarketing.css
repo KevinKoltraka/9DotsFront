@@ -1,0 +1,207 @@
+
+  /* Hero Section */
+  .hero5 {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .hero5 h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #ff7e5f;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #feb47b;
+    color: white;
+  }
+  
+  /* Infographic Section */
+  .infographic {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chart {
+    width: 40%;
+  }
+  
+  .tooltip {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0.8;
+    font-size: 0.9rem;
+  }
+  
+  /* Testimonial Section */
+  .testimonials {
+    padding: 60px 20px;
+    background-color: #f1f1f1;
+  }
+  
+  .carousel .quote {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .carousel .quote p:first-child {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .carousel .quote p:last-child {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff7e5f;
+  }
+  
+  /* Content Showcase Section */
+  .showcase {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 20px;
+    background-color: #fff;
+  }
+  
+  .showcase .image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .showcase .text {
+    width: 45%;
+  }
+  
+  .showcase h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .showcase p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Client Logos Section */
+  .client-logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .client-logos .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .client-logos img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .client-logos p {
+    margin-top: 10px;
+    color: #777;
+    font-weight: bold;
+  }
+  
+  /* Sticky Footer with CTA */
+  .sticky-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ff7e5f;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sticky-footer p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .sticky-footer .cta-button {
+    padding: 15px 30px;
+    background-color: white;
+    color: #ff7e5f;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sticky-footer .cta-button:hover {
+    background-color: #feb47b;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .infographic {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .chart {
+      width: 80%;
+      margin-bottom: 30px;
+    }
+  
+    .showcase {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .showcase .text {
+      width: 80%;
+      margin-top: 30px;
+    }
+  
+    .client-logos {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .client-logos .logo {
+      margin-bottom: 20px;
+    }
+  }
+  
