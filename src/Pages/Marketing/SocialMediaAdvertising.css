@@ -1,0 +1,175 @@
+/* General Styles */
+.social-media-ad-template {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .hero {
+    background: linear-gradient(to right, #ffcc00, #ff6600);
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 5px solid #ff6600;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .hero-content p {
+    font-size: 1.3rem;
+    color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  
+  .social-media-feed {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .social-feed h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .social-post {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    margin: 20px auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .social-post:hover {
+    transform: translateY(-10px);
+  }
+  
+  .social-post h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .social-post p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .post-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .post-stats button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffcc00;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .post-stats button:hover {
+    background-color: #ff6600;
+  }
+  
+  .analytics-graph {
+    margin-top: 50px;
+  }
+  
+  .graph-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .graph-bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .engagement-bar,
+  .shares-bar {
+    height: 20px;
+    background-color: #ffcc00;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .engagement-bar span,
+  .shares-bar span {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  .cta-social {
+    background-color: #f8f8f8;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  .cta-social h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .cta-btn {
+    padding: 15px 30px;
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #ff3300;
+    transform: scale(1.1);
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.2rem;
+    }
+  
+    .hero-content p {
+      font-size: 1rem;
+      max-width: 90%;
+    }
+  
+    .social-feed {
+      padding: 40px 10px;
+    }
+  
+    .social-post {
+      width: 90%;
+    }
+  
+    .post-stats {
+      flex-direction: column;
+    }
+  }
+  

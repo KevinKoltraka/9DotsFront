@@ -19,6 +19,7 @@ import DigitalMarketing from './Pages/Marketing/DigitalMarketing';
 import Seo from './Pages/Marketing/Seo';
 import PPC from './Pages/Marketing/PPC';
 import SocialMediaMarketing from './Pages/Marketing/SocialMediaMarketing';
+import SocialMediaAdvertising from './Pages/Marketing/SocialMediaAdvertising';
         
 
 
@@ -38,6 +39,7 @@ function App() {
           <Route path="/Marketing/seo" element={<Seo />} />
           <Route path="/Marketing/ppc-marketing" element={<PPC />} />
           <Route path="/Marketing/social-media-marketing" element={<SocialMediaMarketing />} />
+          <Route path="/Marketing/social-media-advertising" element={<SocialMediaAdvertising />} />
           <Route path="/recruiting" element={<Recruiting />} />
           <Route path="/job-post" element={<JobPost />} />
           <Route path="/job-list" element={<JobList />} />

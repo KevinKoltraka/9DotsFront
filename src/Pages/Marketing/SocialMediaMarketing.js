@@ -12,20 +12,7 @@ const SocialMediaMarketing = () => {
           <source src="/sm marketing.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <motion.div
-          className="hero-content"
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <h1 className="hero-title2">Unleash Your Brand’s Voice with Social Media</h1>
-          <p className="hero-description">
-            Take your brand to the next level with the power of social media—where engagement turns into influence and creativity knows no bounds.
-          </p>
-          <Link to="/contact">
-            <button className="cta-button4">Let’s Get Started</button>
-          </Link>
-        </motion.div>
+        
       </section>
 
       {/* The Pulse of Social Media */}
@@ -92,7 +79,7 @@ const SocialMediaMarketing = () => {
             transition={{ duration: 1.5 }}
           >
             <img
-              src="https://source.unsplash.com/1200x800/?social-media,marketing"
+              src="/creative.png"
               alt="Creative Campaign"
             />
             <p>Campaigns that make an impression.</p>
@@ -104,7 +91,7 @@ const SocialMediaMarketing = () => {
             transition={{ duration: 1.5 }}
           >
             <img
-              src="https://source.unsplash.com/1200x800/?branding,social-media"
+              src="/branding.png"
               alt="Branding Impact"
             />
             <p>Turning vision into viral content.</p>
