@@ -7,10 +7,17 @@
     overflow: hidden;
   }
   
-  .hero-title {
+  .hero-title2 {
+    color: black;
     font-size: 3rem;
     margin-bottom: 20px;
     font-weight: bold;
+  }
+
+  .hero-content {
+    margin-top: 22% !important;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.144);
   }
   
   .hero-description {
@@ -18,9 +25,10 @@
     margin-bottom: 40px;
   }
   
-  .cta-button {
-    background-color: #F9D423;
-    color: #FF6F61;
+  .cta-button4 {
+    margin-bottom: 5px;
+    background-color: #000000;
+    color: #ffffff;
     border: none;
     padding: 14px 30px;
     font-size: 1.2rem;
@@ -29,9 +37,10 @@
     transition: 0.3s;
   }
   
-  .cta-button:hover {
-    background-color: #FF6F61;
-    color: white;
+  .cta-button4:hover {
+    background-color: #ffffff;
+    border: #000000 solid 2px;
+    color: rgb(0, 0, 0);
   }
   
   /* Pulse Section */
