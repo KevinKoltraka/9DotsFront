@@ -119,8 +119,7 @@
   font-family: sans-serif;
 }
 
-.impact-cards {
-  display: grid;
+.impact-cards2 {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   margin-top: 20px;
@@ -128,7 +127,7 @@
 }
 
 .impact-card {
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   border-radius: 12px;
   padding: 30px 10px 0px 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

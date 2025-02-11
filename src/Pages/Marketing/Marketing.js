@@ -102,7 +102,7 @@ const MarketingPage = () => {
 
       <section className="impact-stories">
         <h2>Our Work That Leaves an Impact</h2>
-        <div className="impact-cards">
+        <div className="impact-cards2">
           <div className="impact-card">
             <h3>Reimagining Experiences</h3>
             <p>
