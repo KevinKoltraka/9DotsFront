@@ -175,7 +175,7 @@ function Portfolio() {
 
       {modalActive && selectedProject && (
         <div className="modal active">
-          <div className="modal-content">
+          <div className="modal-content2">
             <button className="close-btn" onClick={closeModal}>×</button>
             {selectedProject.mediaType === "image" ? (
               <img src={selectedProject.detailedMedia[currentIndex]} alt={selectedProject.title} className="modal-image" />

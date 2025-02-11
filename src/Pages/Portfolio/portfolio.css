@@ -250,7 +250,7 @@
     }
 
     /* Modal Content Styles (Image/Video on left, text on right) */
-    .modal-content {
+    .modal-content2 {
         gap: 3rem;
         align-items: center;
         z-index: 1;
@@ -269,7 +269,7 @@
     }
 
     /* Image Styles in Modal */
-    .modal-content img {
+    .modal-content2 img {
         border-radius: 10px;
         object-fit: contain;
         margin-right: 20px;
@@ -278,7 +278,7 @@
         /* Limit height of both images and videos */
     }
 
-    .modal-content video {
+    .modal-content2 video {
         border-radius: 10px;
         object-fit: contain;
         margin-right: 20px;
@@ -289,7 +289,8 @@
     }
 
     /* Text Styles in Modal */
-    .modal-content .modal-text {
+    .modal-content2 .modal-text {
+        padding-left: 15px;
         width: 45%;
         /* Text takes 45% of the modal width */
         overflow-y: auto;
