@@ -1,0 +1,23 @@
+.meter-container {
+    width: 100%;
+    max-width: 400px;
+    background: #ddd;
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .meter-bar {
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .meter-label {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  

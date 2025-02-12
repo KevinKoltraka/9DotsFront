@@ -24,6 +24,7 @@ import LinkBuilding from './Pages/Marketing/LinkBuilding';
 import WebDesign from './Pages/Marketing/WebDesign';
 import MediaProduction from './Pages/Marketing/MediaProduction';
 import ContentMarketing from './Pages/Marketing/ContentMarketing';
+import ReputationManagement from './Pages/Marketing/ReputationManagement';
         
 
 
@@ -48,6 +49,7 @@ function App() {
           <Route path="/Marketing/web-design" element={<WebDesign />} />
           <Route path="/Marketing/media-production" element={<MediaProduction />} />
           <Route path="/Marketing/content-marketing" element={<ContentMarketing />} />
+          <Route path="/Marketing/reputation-management" element={<ReputationManagement />} />
           <Route path="/recruiting" element={<Recruiting />} />
           <Route path="/job-post" element={<JobPost />} />
           <Route path="/job-list" element={<JobList />} />
