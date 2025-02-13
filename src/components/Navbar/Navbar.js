@@ -113,11 +113,10 @@ const Navbar = () => {
                 <ul className="dropdown-menu">
                   {marketingSubLinks.map((subLink, index) => (
                     <li key={index} className="dropdown-item">
-                      <Link
-                        to={`/Marketing/${subLink.replace(/\s+/g, "-").toLowerCase()}`}
-                      >
+                      <Link to={`/Marketing/${subLink.replace(/\s+/g, "-").toLowerCase()}`}>
                         {subLink}
                       </Link>
+
                     </li>
                   ))}
                 </ul>

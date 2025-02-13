@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import { BrowserRouter as Router, Routes, Route,  } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Error from './Pages/Error/Error';
 import Contact from './Pages/Contact/Contact';
@@ -25,15 +25,14 @@ import WebDesign from './Pages/Marketing/WebDesign';
 import MediaProduction from './Pages/Marketing/MediaProduction';
 import ContentMarketing from './Pages/Marketing/ContentMarketing';
 import ReputationManagement from './Pages/Marketing/ReputationManagement';
-        
-
+import EcommerceMarketing from "./Pages/Marketing/EcommerceMarketing";
+import OnlineMarketplaceMarketing from "./Pages/Marketing/OnlineMarketplaceMarketing.js"; 
 
 function App() {
-
   return (
     <>
       <Router>
-        <ScrollToTop/>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -50,17 +49,19 @@ function App() {
           <Route path="/Marketing/media-production" element={<MediaProduction />} />
           <Route path="/Marketing/content-marketing" element={<ContentMarketing />} />
           <Route path="/Marketing/reputation-management" element={<ReputationManagement />} />
+          <Route path="/marketing/e-commerce-marketing" element={<EcommerceMarketing />} />
+          <Route path="/marketing/online-marketplace-marketing" element={<OnlineMarketplaceMarketing />} />
           <Route path="/recruiting" element={<Recruiting />} />
           <Route path="/job-post" element={<JobPost />} />
           <Route path="/job-list" element={<JobList />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Error />} />
-          <Route path="/terms" element={<Terms />}/>
-          <Route path="/disclaimer" element={< Disclaimer />}/>
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/disclaimer" element={< Disclaimer />} />
           <Route path="/privacy-policy" element={< Privacy />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </Router>
     </>
   );
