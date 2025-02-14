@@ -34,7 +34,7 @@ const MarketingPage = () => {
         <p>Your trusted marketing and recruiting agency</p>
       </header>
 
-      <section className="services">
+      <section className="servicesmarketing">
         <h2>Our Services</h2>
         <div className="service-cards">
           <div
@@ -155,10 +155,21 @@ const MarketingPage = () => {
         </div>
       </section>
 
-      <footer className="contactus">
+      <footer className="contactusmarketing">
         <p>Contact us for your marketing and recruiting needs</p>
-        <button className="getintouch">Get in Touch</button>
+        <button
+          className="getintouchmarketing"
+          onClick={() =>
+            window.open(
+              "https://mail.google.com/mail/?view=cm&fs=1&to=your_email@example.com",
+              "_blank"
+            )
+          }
+        >
+          Get in Touch
+        </button>
       </footer>
+
     </div>
   );
 };

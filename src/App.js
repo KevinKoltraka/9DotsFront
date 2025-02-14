@@ -12,7 +12,6 @@ import ScrollToTop from './components/Scroll/ScrollToTop';
 import Portfolio from './Pages/Portfolio/portfolio';
 import Marketing from './Pages/Marketing/Marketing';
 import Recruiting from './Pages/Recruiting/Recruiting';
-import JobPost from './Pages/Recruiting/JobPost';
 import JobList from './Pages/Recruiting/JobList';
 import Blogs from './Pages/Blogs/blogs';
 import DigitalMarketing from './Pages/Marketing/DigitalMarketing';
@@ -60,7 +59,6 @@ function App() {
           <Route path="/recruiting/sourcing" element={<Sourcing />} />
           <Route path="/recruiting/candidates-evaluation" element={<CandidatesEvaluation />} />
           <Route path="/recruiting" element={<Recruiting />} />
-          <Route path="/job-post" element={<JobPost />} />
           <Route path="/job-list" element={<JobList />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />

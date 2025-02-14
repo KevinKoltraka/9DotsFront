@@ -52,13 +52,14 @@
 }
 
 /* Services */
-.services {
+.servicesmarketing {
   padding: 60px 0;
   text-align: center;
   font-family: sans-serif;
 }
 
-.services h2 {
+.servicesmarketing h2 {
+  color: #000000;
   font-size: 2.5rem;
   margin-bottom: 40px;
   font-family: sans-serif;
@@ -157,19 +158,27 @@
   font-family: sans-serif;
 }
 
-.contactus {
+.contactusmarketing {
   display: flex;
+  flex-direction: column;
+  gap: 15px;
   justify-content: center; /* Centers horizontally */
   align-items: center; /* Centers vertically */
 }
 
-.getintouch {
+.contactusmarketing p {
+  font-size: 2rem;
+}
+
+.getintouchmarketing {
   background-color: #000000;
   color: #ffffff;
   transition: transform 0.3s ease-in-out;
+  padding: 1rem;
+  font-size: 1.5rem;
 }
 
-.getintouch:hover {
+.getintouchmarketing:hover {
   background-color: #000000;
   animation: shake 0.4s ease-in-out;
 }

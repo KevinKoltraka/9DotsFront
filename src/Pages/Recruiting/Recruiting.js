@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./recruiting.css";
 import recrImage from "../../images/recruitment/Rec1.png";
 import recrImage2 from "../../images/recruitment/Rec2.png";
@@ -10,7 +11,28 @@ const RecruitingPage = () => {
   const [jobTitle, setJobTitle] = useState("");
   const [jobDescription, setJobDescription] = useState("");
   const [jobLocation, setJobLocation] = useState("");
+  const [jobSalary, setJobSalary] = useState("");
+  const [jobRequirements, setJobRequirements] = useState("");
+  const [jobCompanyName, setJobCompanyName] = useState("");
+  const [jobDeadline, setJobDeadline] = useState("");
+  const [jobEmploymentType, setJobEmploymentType] = useState("");
+  const [jobCategory, setJobCategory] = useState("");
+  const [jobSkills, setJobSkills] = useState("");
   const [jobList, setJobList] = useState([]);
+
+  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
+
+  // Fetch job listings from the backend on component mount
+  useEffect(() => {
+    axios
+      .get(`${apiUrl}/jobs`)
+      .then((response) => {
+        setJobList(response.data.jobs);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the jobs!", error);
+      });
+  }, [apiUrl]);
 
   const toggleShowMore = () => {
     if (showMore) {
@@ -24,13 +46,59 @@ const RecruitingPage = () => {
 
   const handleJobSubmit = (e) => {
     e.preventDefault();
-    // Logic to send data to the backend (to be implemented later)
-    const newJob = { title: jobTitle, description: jobDescription, location: jobLocation };
-    setJobList([...jobList, newJob]);
-    setJobTitle("");
-    setJobDescription("");
-    setJobLocation("");
+
+    const jobData = {
+      title: jobTitle,
+      description: jobDescription,
+      location: jobLocation,
+      salary: jobSalary,
+      requirements: jobRequirements,
+      companyName: jobCompanyName,
+      deadline: jobDeadline,
+      employmentType: jobEmploymentType,
+      jobCategory: jobCategory,
+      skills: jobSkills,
+    };
+
+    axios
+      .post(`${apiUrl}/post-job`, jobData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        setJobList([...jobList, response.data]);
+        setJobTitle("");
+        setJobDescription("");
+        setJobLocation("");
+        setJobSalary("");
+        setJobRequirements("");
+        setJobCompanyName("");
+        setJobDeadline("");
+        setJobEmploymentType("");
+        setJobCategory("");
+        setJobSkills("");
+      })
+      .catch((error) => {
+        console.error("There was an error posting the job!", error);
+      });
   };
+
+
+
+  const handleJobDelete = (jobId) => {
+    console.log(jobId); // Check if this is the correct job ID
+    axios
+      .delete(`${apiUrl}/delete-job/${jobId}`)
+      .then(() => {
+        const updatedJobList = jobList.filter((job) => job.id !== jobId);
+        setJobList(updatedJobList);
+      })
+      .catch((error) => {
+        console.error("There was an error deleting the job!", error);
+      });
+  };
+
 
   return (
     <div className="marketing-container">
@@ -145,6 +213,74 @@ const RecruitingPage = () => {
               required
             />
           </div>
+          <div>
+            <label htmlFor="jobSalary">Salary</label>
+            <input
+              type="text"
+              id="jobSalary"
+              value={jobSalary}
+              onChange={(e) => setJobSalary(e.target.value)}
+            />
+          </div>
+          <div>
+            <label htmlFor="jobRequirements">Requirements</label>
+            <textarea
+              id="jobRequirements"
+              value={jobRequirements}
+              onChange={(e) => setJobRequirements(e.target.value)}
+            />
+          </div>
+          <div>
+            <label htmlFor="jobCompanyName">Company Name</label>
+            <input
+              type="text"
+              id="jobCompanyName"
+              value={jobCompanyName}
+              onChange={(e) => setJobCompanyName(e.target.value)}
+            />
+          </div>
+          <div>
+            <label htmlFor="jobDeadline">Application Deadline</label>
+            <input
+              type="date"
+              id="jobDeadline"
+              value={jobDeadline}
+              onChange={(e) => setJobDeadline(e.target.value)}
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="jobEmploymentType">Employment Type</label>
+            <input
+              type="text"
+              id="jobEmploymentType"
+              value={jobEmploymentType}
+              onChange={(e) => setJobEmploymentType(e.target.value)}
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="jobCategory">Job Category</label>
+            <input
+              type="text"
+              id="jobCategory"
+              value={jobCategory}
+              onChange={(e) => setJobCategory(e.target.value)}
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="jobSkills">Required Skills</label>
+            <textarea
+              id="jobSkills"
+              value={jobSkills}
+              onChange={(e) => setJobSkills(e.target.value)}
+            />
+          </div>
+
           <button type="submit" className="post-job-btn">Post Job</button>
         </form>
       </section>
@@ -156,16 +292,28 @@ const RecruitingPage = () => {
           {jobList.length === 0 ? (
             <p>No jobs posted yet.</p>
           ) : (
-            jobList.map((job, index) => (
-              <div className="job-item" key={index}>
+            jobList.map((job) => (
+              <div className="job-item" key={job.id}>
                 <h3>{job.title}</h3>
                 <p>{job.description}</p>
-                <span>{job.location}</span>
+                <p><strong>Location:</strong> {job.location}</p>
+                <p><strong>Salary:</strong> {job.salary}</p>
+                <p><strong>Requirements:</strong> {job.requirements}</p>
+                <p><strong>Company Name:</strong> {job.company_name}</p>
+                <p><strong>Deadline:</strong> {job.deadline}</p>
+                <p><strong>Employment Type:</strong> {job.employment_type}</p>
+                <p><strong>Job Category:</strong> {job.job_category}</p>
+                <p><strong>Skills:</strong> {job.skills}</p>
+                <button onClick={() => handleJobDelete(job.id)} className="delete-job-btn">
+                  Delete Job
+                </button>
               </div>
+
             ))
           )}
         </div>
       </section>
+
 
       <footer className="contactus">
         <p>Contact us for your marketing and recruiting needs</p>
