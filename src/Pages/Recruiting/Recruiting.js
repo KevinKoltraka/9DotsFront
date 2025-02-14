@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import "./recruiting.css";
-import marketingImage from "../../images/recruitment/Rec1.png";
-import marketingImage2 from "../../images/recruitment/Rec2.png";
-import marketingImage3 from "../../images/recruitment/Rec3.png";
-import marketingImage4 from "../../images/recruitment/Rec4.png";
+import recrImage from "../../images/recruitment/Rec1.png";
+import recrImage2 from "../../images/recruitment/Rec2.png";
+import recrImage3 from "../../images/recruitment/Rec3.png";
+import recrImage4 from "../../images/recruitment/Rec4.png";
 
-const MarketingPage = () => {
+const RecruitingPage = () => {
   const [showMore, setShowMore] = useState(false);
+  const [jobTitle, setJobTitle] = useState("");
+  const [jobDescription, setJobDescription] = useState("");
+  const [jobLocation, setJobLocation] = useState("");
+  const [jobList, setJobList] = useState([]);
 
   const toggleShowMore = () => {
-    // Scroll to top if we are switching to "View Less"d
     if (showMore) {
       window.scrollTo({
         top: 0,
@@ -17,6 +20,16 @@ const MarketingPage = () => {
       });
     }
     setShowMore(!showMore);
+  };
+
+  const handleJobSubmit = (e) => {
+    e.preventDefault();
+    // Logic to send data to the backend (to be implemented later)
+    const newJob = { title: jobTitle, description: jobDescription, location: jobLocation };
+    setJobList([...jobList, newJob]);
+    setJobTitle("");
+    setJobDescription("");
+    setJobLocation("");
   };
 
   return (
@@ -31,26 +44,22 @@ const MarketingPage = () => {
         <div className="service-cards">
           <div
             className="service-card digital-marketing"
-            style={{ backgroundImage: `url(${marketingImage})` }}
+            style={{ backgroundImage: `url(${recrImage})` }}
           ></div>
           <div
             className="service-card"
-            style={{ backgroundImage: `url(${marketingImage2})` }}
+            style={{ backgroundImage: `url(${recrImage2})` }}
           ></div>
           <div
             className="service-card"
-            style={{ backgroundImage: `url(${marketingImage3})` }}
+            style={{ backgroundImage: `url(${recrImage3})` }}
           ></div>
 
-          {/* Only show the rest if 'showMore' is true */}
           {showMore && (
-            <>
-              <div
-                className="service-card"
-                style={{ backgroundImage: `url(${marketingImage4})` }}
-              ></div>
-
-            </>
+            <div
+              className="service-card"
+              style={{ backgroundImage: `url(${recrImage4})` }}
+            ></div>
           )}
         </div>
 
@@ -67,7 +76,7 @@ const MarketingPage = () => {
           <div className="impact-card">
             <h3>Redefining Opportunities</h3>
             <p>
-              We connect talent with the right opportunities, ensuring every career move is strategic and impactful. Our recruitment process is designed to unlock potential and create lasting professional growth.
+              We connect talent with the right opportunities, ensuring every career move is strategic and impactful. Our recruitment process is designed to unlock potential and create professional growth.
             </p>
           </div>
           <div className="impact-card">
@@ -103,6 +112,60 @@ const MarketingPage = () => {
         </div>
       </section>
 
+      {/* Job Post Section */}
+      <section className="job-post-section">
+        <h2>Post a Job</h2>
+        <form onSubmit={handleJobSubmit} className="job-post-form">
+          <div>
+            <label htmlFor="jobTitle">Job Title</label>
+            <input
+              type="text"
+              id="jobTitle"
+              value={jobTitle}
+              onChange={(e) => setJobTitle(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="jobDescription">Job Description</label>
+            <textarea
+              id="jobDescription"
+              value={jobDescription}
+              onChange={(e) => setJobDescription(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="jobLocation">Job Location</label>
+            <input
+              type="text"
+              id="jobLocation"
+              value={jobLocation}
+              onChange={(e) => setJobLocation(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="post-job-btn">Post Job</button>
+        </form>
+      </section>
+
+      {/* Job Listings Section */}
+      <section className="job-listings">
+        <h2>Job Listings</h2>
+        <div className="job-list">
+          {jobList.length === 0 ? (
+            <p>No jobs posted yet.</p>
+          ) : (
+            jobList.map((job, index) => (
+              <div className="job-item" key={index}>
+                <h3>{job.title}</h3>
+                <p>{job.description}</p>
+                <span>{job.location}</span>
+              </div>
+            ))
+          )}
+        </div>
+      </section>
 
       <footer className="contactus">
         <p>Contact us for your marketing and recruiting needs</p>
@@ -112,4 +175,4 @@ const MarketingPage = () => {
   );
 };
 
-export default MarketingPage;
+export default RecruitingPage;
