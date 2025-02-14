@@ -7,8 +7,9 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [isMarketingOpen, setIsMarketingOpen] = useState(false); // State for dropdown
-  const [dropdownTimeout, setDropdownTimeout] = useState(null); // State for timeout
+  const [isMarketingOpen, setIsMarketingOpen] = useState(false);
+  const [isRecruitingOpen, setIsRecruitingOpen] = useState(false);
+  const [dropdownTimeout, setDropdownTimeout] = useState(null);
   const location = useLocation();
 
   const routes = useMemo(
@@ -38,22 +39,29 @@ const Navbar = () => {
     "Online Marketplace Marketing",
   ];
 
+  const recruitingSubLinks = [
+    "Executive Search",
+    "Recruitment Support",
+    "Sourcing",
+    "Candidates Evaluation",
+  ];
+
   const activeLink = useMemo(() => location.pathname, [location.pathname]);
 
   const handleClick = () => {
-    setIsMobile((prev) => !prev); // Toggle mobile state
+    setIsMobile((prev) => !prev);
   };
 
-  const handleMouseEnter = () => {
-    clearTimeout(dropdownTimeout); // Clear any existing timeout
-    setIsMarketingOpen(true); // Show the dropdown
+  const handleMouseEnter = (setDropdown) => {
+    clearTimeout(dropdownTimeout);
+    setDropdown(true);
   };
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = (setDropdown) => {
     const timeout = setTimeout(() => {
-      setIsMarketingOpen(false); // Hide the dropdown after delay
-    }, 2000); // Delay of 2000ms
-    setDropdownTimeout(timeout); // Store the timeout
+      setDropdown(false);
+    }, 2000);
+    setDropdownTimeout(timeout);
   };
 
   return (
@@ -96,9 +104,23 @@ const Navbar = () => {
           {routes.map(({ path, label }) => (
             <li
               key={path}
-              className={`link-item ${label === "Marketing" ? "dropdown" : ""}`}
-              onMouseEnter={label === "Marketing" ? handleMouseEnter : undefined}
-              onMouseLeave={label === "Marketing" ? handleMouseLeave : undefined}
+              className={`link-item ${
+                label === "Marketing" || label === "Recruiting" ? "dropdown" : ""
+              }`}
+              onMouseEnter={
+                label === "Marketing"
+                  ? () => handleMouseEnter(setIsMarketingOpen)
+                  : label === "Recruiting"
+                  ? () => handleMouseEnter(setIsRecruitingOpen)
+                  : undefined
+              }
+              onMouseLeave={
+                label === "Marketing"
+                  ? () => handleMouseLeave(setIsMarketingOpen)
+                  : label === "Recruiting"
+                  ? () => handleMouseLeave(setIsRecruitingOpen)
+                  : undefined
+              }
             >
               <Link
                 to={path}
@@ -113,10 +135,26 @@ const Navbar = () => {
                 <ul className="dropdown-menu">
                   {marketingSubLinks.map((subLink, index) => (
                     <li key={index} className="dropdown-item">
-                      <Link to={`/Marketing/${subLink.replace(/\s+/g, "-").toLowerCase()}`}>
+                      <Link
+                        to={`/Marketing/${subLink.replace(/\s+/g, "-").toLowerCase()}`}
+                      >
                         {subLink}
                       </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
 
+              {/* Dropdown for Recruiting */}
+              {label === "Recruiting" && isRecruitingOpen && (
+                <ul className="dropdown-menu">
+                  {recruitingSubLinks.map((subLink, index) => (
+                    <li key={index} className="dropdown-item">
+                      <Link
+                        to={`/Recruiting/${subLink.replace(/\s+/g, "-").toLowerCase()}`}
+                      >
+                        {subLink}
+                      </Link>
                     </li>
                   ))}
                 </ul>

@@ -27,6 +27,10 @@ import ContentMarketing from './Pages/Marketing/ContentMarketing';
 import ReputationManagement from './Pages/Marketing/ReputationManagement';
 import EcommerceMarketing from "./Pages/Marketing/EcommerceMarketing";
 import OnlineMarketplaceMarketing from "./Pages/Marketing/OnlineMarketplaceMarketing.js"; 
+import ExecutiveSearch from "./Pages/Recruiting/ExecutiveSearch.js"; 
+import RecruitmentSupport from "./Pages/Recruiting/RecruitmentSupport";
+import Sourcing from "./Pages/Recruiting/Sourcing";
+import CandidatesEvaluation from "./Pages/Recruiting/CandidatesEvaluation";
 
 function App() {
   return (
@@ -51,6 +55,10 @@ function App() {
           <Route path="/Marketing/reputation-management" element={<ReputationManagement />} />
           <Route path="/marketing/e-commerce-marketing" element={<EcommerceMarketing />} />
           <Route path="/marketing/online-marketplace-marketing" element={<OnlineMarketplaceMarketing />} />
+          <Route path="/recruiting/executive-search" element={<ExecutiveSearch />} />
+          <Route path="/recruiting/recruitment-support" element={<RecruitmentSupport />} />
+          <Route path="/recruiting/sourcing" element={<Sourcing />} />
+          <Route path="/recruiting/candidates-evaluation" element={<CandidatesEvaluation />} />
           <Route path="/recruiting" element={<Recruiting />} />
           <Route path="/job-post" element={<JobPost />} />
           <Route path="/job-list" element={<JobList />} />
