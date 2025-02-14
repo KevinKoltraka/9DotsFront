@@ -11,7 +11,7 @@ const initialServices = [
 ];
 
 const EcommerceMarketing = () => {
-  const [services, setServices] = useState(initialServices);
+  const [services] = useState(initialServices);
   const [highlighted, setHighlighted] = useState(null);
 
   useEffect(() => {
