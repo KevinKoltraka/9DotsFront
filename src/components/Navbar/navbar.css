@@ -1,3 +1,17 @@
+.link-with-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dropdown-arrow {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-left: 8px;
+  color: #ffffff;
+}
+
 
 /* Style for dropdown */
 .dropdown {
@@ -22,6 +36,7 @@
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
+
 
 .dropdown:hover .dropdown-menu {
   opacity: 1;

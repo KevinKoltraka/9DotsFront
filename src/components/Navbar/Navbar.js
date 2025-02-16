@@ -1,7 +1,7 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import "./navbar.css";
-import { FaBars, FaTimes } from "react-icons/fa";
 import zolaha from "./../../images/9DotsLogo.jpg";
 import { motion } from "framer-motion";
 
@@ -10,6 +10,7 @@ const Navbar = () => {
   const [isMarketingOpen, setIsMarketingOpen] = useState(false);
   const [isRecruitingOpen, setIsRecruitingOpen] = useState(false);
   const [dropdownTimeout, setDropdownTimeout] = useState(null);
+  const [lastClicked, setLastClicked] = useState(null);
   const location = useLocation();
 
   const routes = useMemo(
@@ -48,20 +49,54 @@ const Navbar = () => {
 
   const activeLink = useMemo(() => location.pathname, [location.pathname]);
 
+  useEffect(() => {
+    return () => {
+      if (dropdownTimeout) clearTimeout(dropdownTimeout);
+    };
+  }, [dropdownTimeout]);
+
   const handleClick = () => {
     setIsMobile((prev) => !prev);
+    setIsMarketingOpen(false);
+    setIsRecruitingOpen(false);
   };
 
   const handleMouseEnter = (setDropdown) => {
-    clearTimeout(dropdownTimeout);
-    setDropdown(true);
+    if (!isMobile) {
+      clearTimeout(dropdownTimeout);
+      setDropdown(true);
+    }
   };
 
   const handleMouseLeave = (setDropdown) => {
-    const timeout = setTimeout(() => {
-      setDropdown(false);
-    }, 2000);
-    setDropdownTimeout(timeout);
+    if (!isMobile) {
+      const timeout = setTimeout(() => {
+        setDropdown(false);
+      }, 500);
+      setDropdownTimeout(timeout);
+    }
+  };
+
+  const handleDropdownClick = (dropdownSetter, label, e) => {
+    if (isMobile) {
+      if (lastClicked === label) {
+        setLastClicked(null);
+      } else {
+        setIsMarketingOpen(false);
+        setIsRecruitingOpen(false);
+        dropdownSetter(true);
+        setLastClicked(label);
+        e.preventDefault();
+      }
+    }
+  };
+
+  const closeDropdowns = () => {
+    if (isMobile) {
+      setIsMarketingOpen(false);
+      setIsRecruitingOpen(false);
+      setLastClicked(null);
+    }
   };
 
   return (
@@ -75,12 +110,7 @@ const Navbar = () => {
         <div className="company-name">
           <span className="handwriting-text left-text">9DOTS</span>
           <Link to="/">
-            <img
-              className="company-logo"
-              src={zolaha}
-              alt="logo"
-              loading="lazy"
-            />
+            <img className="company-logo" src={zolaha} alt="logo" loading="lazy" />
           </Link>
           <span className="handwriting-text right-text">AGENCY</span>
         </div>
@@ -92,11 +122,7 @@ const Navbar = () => {
         whileTap={{ scale: 0.8 }}
         whileHover={{ rotate: 90 }}
       >
-        {isMobile ? (
-          <FaTimes className="ham-icon" />
-        ) : (
-          <FaBars className="ham-icon" />
-        )}
+        {isMobile ? <FaTimes className="ham-icon" /> : <FaBars className="ham-icon" />}
       </motion.div>
 
       <div className={`middle-navbar ${isMobile ? "active" : ""}`}>
@@ -104,9 +130,7 @@ const Navbar = () => {
           {routes.map(({ path, label }) => (
             <li
               key={path}
-              className={`link-item ${
-                label === "Marketing" || label === "Recruiting" ? "dropdown" : ""
-              }`}
+              className={`link-item ${label === "Marketing" || label === "Recruiting" ? "dropdown" : ""}`}
               onMouseEnter={
                 label === "Marketing"
                   ? () => handleMouseEnter(setIsMarketingOpen)
@@ -121,23 +145,29 @@ const Navbar = () => {
                   ? () => handleMouseLeave(setIsRecruitingOpen)
                   : undefined
               }
+              onClick={(e) => handleDropdownClick(label === "Marketing" ? setIsMarketingOpen : setIsRecruitingOpen, label, e)}
             >
-              <Link
-                to={path}
-                className={`link ${activeLink === path ? "active" : ""}`}
-                onClick={() => setIsMobile(false)}
-              >
-                {label}
-              </Link>
+              <div className="link-with-arrow">
+                <Link to={path} className={`link ${activeLink === path ? "active" : ""}`} onClick={closeDropdowns}>
+                  {label}
+                </Link>
 
-              {/* Dropdown for Marketing */}
-              {label === "Marketing" && isMarketingOpen && (
-                <ul className="dropdown-menu">
+                {(label === "Marketing" || label === "Recruiting") && (
+                  <FaChevronDown
+                    className={`dropdown-arrow ${((label === "Marketing" && isMarketingOpen) || (label === "Recruiting" && isRecruitingOpen)) ? "open" : ""}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleDropdownClick(label === "Marketing" ? setIsMarketingOpen : setIsRecruitingOpen, label, e);
+                    }}
+                  />
+                )}
+              </div>
+
+              {label === "Marketing" && (isMarketingOpen || isMobile) && (
+                <ul className={`dropdown-menu ${isMarketingOpen ? "visible" : ""}`}>
                   {marketingSubLinks.map((subLink, index) => (
                     <li key={index} className="dropdown-item">
-                      <Link
-                        to={`/Marketing/${subLink.replace(/\s+/g, "-").toLowerCase()}`}
-                      >
+                      <Link to={`/Marketing/${subLink.replace(/\s+/g, "-").toLowerCase()}`} onClick={closeDropdowns}>
                         {subLink}
                       </Link>
                     </li>
@@ -145,14 +175,11 @@ const Navbar = () => {
                 </ul>
               )}
 
-              {/* Dropdown for Recruiting */}
-              {label === "Recruiting" && isRecruitingOpen && (
-                <ul className="dropdown-menu">
+              {label === "Recruiting" && (isRecruitingOpen || isMobile) && (
+                <ul className={`dropdown-menu ${isRecruitingOpen ? "visible" : ""}`}>
                   {recruitingSubLinks.map((subLink, index) => (
                     <li key={index} className="dropdown-item">
-                      <Link
-                        to={`/Recruiting/${subLink.replace(/\s+/g, "-").toLowerCase()}`}
-                      >
+                      <Link to={`/Recruiting/${subLink.replace(/\s+/g, "-").toLowerCase()}`} onClick={closeDropdowns}>
                         {subLink}
                       </Link>
                     </li>
